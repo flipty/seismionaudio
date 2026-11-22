@@ -1,0 +1,217 @@
+.page-template-template-home {
+  main {
+    padding-top: 20px;
+    background: linear-gradient(0deg, $white 50%, $blue 100%) no-repeat;
+  }
+  section.hero {
+    background: $white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    padding: 4px;
+    box-shadow: 0 0 4px $black75;
+    .home-carousel {
+      z-index: 8;
+      margin-bottom: 85px;
+      .owl-item {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        .item {
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          img {
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            @include bp(mobile){
+              height: 160px;
+            }
+          }
+        }
+      }
+    }
+    h1 {
+      position: absolute;
+      bottom: 0;
+      z-index: 9;
+      background: $blue;
+      color: $white;
+      text-align: center;
+      padding: 20px 20px 15px 20px;
+      width: calc(100% - 48px);
+      border-bottom: solid 4px $white;
+      margin-bottom: 0;
+      font-family: $handwriting;
+      margin-bottom: 0;
+      font-size: 2.5em;
+      text-shadow: 0 0 4px $black75;
+      @include bp(mobile){
+        font-size: 1.75em;
+        padding: 10px;
+        width: calc(100% - 28px);
+      }
+    }
+
+  }
+  .labels {
+    box-shadow: 0 0 4px $black75;
+    background: $skyblue;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-bottom: 40px;
+    img {
+      @include bp(mobile){
+        display: none;
+      }
+    }
+    a {
+      display: block;
+      color: $white;
+      font-weight: bold;
+      background: $blue;
+      border-radius: 3px;
+      border: solid 2px darken($bluedark, 20%);
+      padding: 0.65em 2em 0.5em 2em;
+      line-height:20px;
+      text-decoration: none;
+      transition: all 250ms;
+      @include bp(mobile){
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        text-align: center;
+      }
+      &:hover {
+        color: darken($bluedark, 25%);
+        background: lighten($blue, 30%);
+        border: solid 2px darken($blue, 20%);
+      }
+    }
+  }
+
+  .content {
+    h2 {
+      padding-left: 75px;
+      background-size: 60px;
+      background-repeat: no-repeat;
+      line-height: 60px;
+      @include bp(mobile){
+        background-size: 45px;
+        line-height: 50px;
+        padding-left: 55px;
+        font-size: 1em;
+      }
+    }
+    .primary-content {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      @include bp(mobile){
+          display: block;
+      }
+      > div {
+        width: 45%;
+        @include bp(mobile){
+            width: 100%;
+        }
+        h2 {
+          color: $blue;
+          font-weight: normal;
+          @include bp(mobile){
+              color: $black;
+              font-weight: bold;
+          }
+        }
+      }
+      .welcome {
+        h2 {
+          background-image: url('/wp-content/uploads/suds.png');
+        }
+        p {
+          line-height: 1.7em;
+        }
+      }
+      .other-info {
+        h2 {
+          background-image: url('/wp-content/uploads/hanger.png');
+        }
+        h3 + p {
+          font-size: 12px;
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+
+    .secondary-content {
+      margin-top: 40px;
+      border-top: solid 2px $bluedark;
+      padding-top: 40px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      @include bp(mobile){
+          display: block;
+      }
+      > div {
+        width: 47%;
+        @include bp(mobile){
+            width: 100%;
+        }
+        h2 {
+          color: $blue;
+          font-weight: normal;
+          @include bp(mobile){
+              color: $black;
+              font-weight: bold;
+          }
+        }
+      }
+      .testimonials {
+        h2 {
+          background-image: url('/wp-content/uploads/speech.png');
+        }
+        .testimonial {
+          padding: 10px 20px;
+          margin-bottom: 5px;
+          text-align: justify;
+          p {
+            font-size: 12px;
+            line-height: 1.5em;
+          }
+          &:nth-child(even) {
+            background: $blue;
+            color: $white;
+            border-radius: 4px;
+            box-shadow: inset 0px 0px 5px 0px $black90;
+          }
+        }
+      }
+      .photos {
+        ul {
+          padding-left: 0;
+          list-style-image: none;
+          li {
+            list-style-image: none;
+            list-style-type: none;
+            img {
+              max-width: 100%;
+              height: auto;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
