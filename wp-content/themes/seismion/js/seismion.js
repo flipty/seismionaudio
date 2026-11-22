@@ -1,5 +1,5 @@
 // interface.js
-var aha = {
+var seismion = {
   hamburger: function() {
     var $toggler = $('button.navbar-toggler');
     $navbar = $('.navbar-collapse');
@@ -29,6 +29,6 @@ var aha = {
 }
 
 $(document).ready(function() {
-  // aha.headerScroll();
-  aha.hamburger();
+  // seismion.headerScroll();
+  seismion.hamburger();
 });

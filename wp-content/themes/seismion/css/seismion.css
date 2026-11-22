@@ -1,0 +1,18 @@
+@media only screen and (min-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.admin-bar header {
+  padding-top: 32px;
+}
+@media only screen and (max-width: 992px) {
+  .admin-bar header {
+    padding-top: 0;
+  }
+}
