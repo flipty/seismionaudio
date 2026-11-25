@@ -12,10 +12,17 @@
 
 <header>
   <div class="container">
+    <div class="header-container">
+      <div class="branding">
+        <img src="/wp-content/themes/seismion/images/logo.png" alt="Seismion Audio" class="logo">
+      </div>
+      <div class="navigation">
       <?php wp_nav_menu( array(
         'menu' => 'Header Menu',
         'menu_class' => 'header-nav',
         'container' => 'nav'
         )); ?>
+      </div>
+    </div>
   </div>
 </header>

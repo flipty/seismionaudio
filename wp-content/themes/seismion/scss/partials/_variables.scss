@@ -1,4 +1,4 @@
-@mixin bp($point) {
+@mixin breakpoint($point) {
   @if $point == mobile {
     @media only screen and (max-width: 992px) {
       @content;
@@ -27,19 +27,20 @@
 }
 $white: #ffffff;
 $black: #000000;
+$green: rgba(119, 213, 24, 1);
 $gold:  #f28e25;
 $red:   #d43248;
 $blue:  #121f45;
+$grey:  rgba(221,221,221,1);
 $black90: rgba(0,0,0,0.9);
 $black75: rgba(0,0,0,0.75);
 $black50: rgba(0,0,0,0.5);
 $black25: rgba(0,0,0,0.25);
 $black15: rgba(0,0,0,0.15);
 $black10: rgba(0,0,0,0.1);
-$handwriting: "Alex Brush"; 
 
 .mobile-only {
-  @include bp(desktop){
+  @include breakpoint(desktop){
     display: none !important;
   }
 }

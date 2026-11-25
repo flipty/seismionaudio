@@ -29,6 +29,7 @@ var seismion = {
 }
 
 $(document).ready(function() {
+  console.log('seismion.js'); 
   // seismion.headerScroll();
-  seismion.hamburger();
+  //seismion.hamburger();
 });

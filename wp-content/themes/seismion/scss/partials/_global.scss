@@ -1,13 +1,65 @@
 body {
   font-family: sans-serif;
 }
+
+p, div, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 .admin-bar {
   header {
     padding-top: 32px;
-    @include bp(mobile){
+    @include breakpoint(mobile){
       padding-top: 0;
     }
   }
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 992px;
+  @include breakpoint(mobile){
+    padding: 0 15px;
+  }
+}
+
+header {
+  .header-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    .branding {
+      img {
+        max-width: 250px;
+      }
+    }
+    .navigation {
+      nav.header-nav {
+        > ul {
+          display: flex;
+          > li {
+            list-style-type: none;
+            a {
+              color: $green;
+              display: block;
+            }
+            > ul {
+              display: flex;
+              flex-flow: column;
+              > li {
+                list-style-type: none;
+                a {
+                  display: block;
+                  color: red;
+                }
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
   

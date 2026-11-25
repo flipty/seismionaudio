@@ -8,6 +8,11 @@ body {
   font-family: sans-serif;
 }
 
+p, div, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 .admin-bar header {
   padding-top: 32px;
 }
@@ -15,4 +20,44 @@ body {
   .admin-bar header {
     padding-top: 0;
   }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 992px;
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+header .header-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+header .header-container .branding img {
+  max-width: 250px;
+}
+header .header-container .navigation nav.header-nav > ul {
+  display: flex;
+}
+header .header-container .navigation nav.header-nav > ul > li {
+  list-style-type: none;
+}
+header .header-container .navigation nav.header-nav > ul > li a {
+  color: rgb(119, 213, 24);
+  display: block;
+}
+header .header-container .navigation nav.header-nav > ul > li > ul {
+  display: flex;
+  flex-flow: column;
+}
+header .header-container .navigation nav.header-nav > ul > li > ul > li {
+  list-style-type: none;
+}
+header .header-container .navigation nav.header-nav > ul > li > ul > li a {
+  display: block;
+  color: red;
 }
