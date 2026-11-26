@@ -9,22 +9,7 @@ var seismion = {
       $navbar.toggleClass('show');
       console.log($navbar);
     });
-  },
-
-  headerScroll: function() {
-    var $pxScrolled = 350;
-    $(window).scroll(function() {
-      if ($(document).scrollTop() > $pxScrolled) {
-        $('body').addClass('scrolled');
-      } else {
-        $('body').removeClass('scrolled');
-      }
-    });
-    if ($(document).scrollTop() > $pxScrolled) {
-      $('body').addClass('scrolled');
-    }
   }
-
 
 }
 

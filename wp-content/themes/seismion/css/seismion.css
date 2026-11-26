@@ -1,16 +1,44 @@
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 993px) {
   .mobile-only {
     display: none !important;
   }
 }
 
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis-Thin.woff2") format("woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis-Black.woff2") format("woff2");
+  font-weight: 800;
+}
 body {
-  font-family: sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 p, div, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25em;
+}
+
+p, li {
+  line-height: 1.4em;
 }
 
 .admin-bar header {
@@ -32,32 +60,122 @@ p, div, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+main {
+  padding-top: 100px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
 header .header-container {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
+}
+header .header-container .branding {
+  padding-left: 30px;
 }
 header .header-container .branding img {
   max-width: 250px;
+  margin: 10px 0;
 }
-header .header-container .navigation nav.header-nav > ul {
+header .header-container .navigation {
+  padding-right: 30px;
+}
+header .header-container .navigation nav.menu-menu-1-container > ul {
   display: flex;
 }
-header .header-container .navigation nav.header-nav > ul > li {
+header .header-container .navigation nav.menu-menu-1-container > ul > li {
+  list-style-type: none;
+  margin: 0 15px;
+}
+header .header-container .navigation nav.menu-menu-1-container > ul > li a {
+  color: rgb(119, 213, 24);
+  font-size: 11px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  line-height: 13px;
+  padding-top: 2px;
+  transition: all 250ms;
+}
+header .header-container .navigation nav.menu-menu-1-container > ul > li a:hover {
+  color: #ffffff;
+  border-top: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
+}
+header .header-container .navigation nav.menu-menu-1-container > ul > li > ul {
+  display: flex;
+  flex-flow: column;
+  display: none;
+}
+header .header-container .navigation nav.menu-menu-1-container > ul > li > ul > li {
   list-style-type: none;
 }
-header .header-container .navigation nav.header-nav > ul > li a {
-  color: rgb(119, 213, 24);
+header .header-container .navigation nav.menu-menu-1-container > ul > li > ul > li a {
   display: block;
+  color: red;
 }
-header .header-container .navigation nav.header-nav > ul > li > ul {
+
+footer {
+  background: rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #ffffff 15%, rgba(0, 0, 0, 0.15) 75%);
+  position: fixed;
+  width: 100%;
+}
+footer .footer-container {
+  display: flex;
+  flex-flow: column;
+  padding: 0 30px;
+}
+footer .footer-container .branding {
+  text-align: right;
+}
+footer .footer-container .branding img {
+  max-width: 150px;
+  margin: 20px 0 0 0;
+}
+footer .footer-container .navigation nav.menu-menu-1-container > ul {
   display: flex;
   flex-flow: column;
 }
-header .header-container .navigation nav.header-nav > ul > li > ul > li {
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li {
+  list-style-type: none;
+  margin: 0;
+}
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li a {
+  font-size: 12px;
+  color: #000000;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: right;
+  transition: all 250ms;
+}
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li a:hover {
+  color: rgb(36.6244725738%, 65.5547282204%, 7.3864482502%);
+  text-decoration: underline;
+}
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li > ul {
+  display: flex;
+  flex-flow: column;
+  display: none;
+}
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li > ul > li {
   list-style-type: none;
 }
-header .header-container .navigation nav.header-nav > ul > li > ul > li a {
+footer .footer-container .navigation nav.menu-menu-1-container > ul > li > ul > li a {
   display: block;
-  color: red;
+}
+
+.page-template-template-home main {
+  background-size: cover;
+  min-height: 700px;
 }

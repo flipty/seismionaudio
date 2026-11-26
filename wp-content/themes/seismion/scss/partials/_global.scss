@@ -1,10 +1,18 @@
 body {
-  font-family: sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 p, div, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25em;
+}
+
+p, li {
+  line-height: 1.4em;
 }
 
 .admin-bar {
@@ -24,29 +32,57 @@ p, div, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+main {
+  padding-top: 100px;
+}
+
 header {
+  // background: $white25;
+  position: absolute;
+  width: 100%;
   .header-container {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    align-items: center;
     .branding {
+      padding-left: 30px;
       img {
         max-width: 250px;
+        margin: 10px 0;
       }
     }
     .navigation {
-      nav.header-nav {
+      padding-right: 30px;
+      nav.menu-menu-1-container {
         > ul {
           display: flex;
           > li {
             list-style-type: none;
+            margin: 0 15px;
             a {
               color: $green;
+              font-size: 11px;
+              font-weight: bold;
               display: block;
+              text-transform: uppercase;
+              text-decoration: none;
+              display: block;
+              border-top: solid 1px transparent;
+              border-bottom: solid 1px transparent;
+              line-height: 13px;
+              padding-top: 2px;
+              transition: all 250ms;
+              &:hover {
+                color: $white;
+                border-top: solid 1px $white;
+                border-bottom: solid 1px $white;
+              }
             }
             > ul {
               display: flex;
               flex-flow: column;
+              display: none;
               > li {
                 list-style-type: none;
                 a {
@@ -63,3 +99,59 @@ header {
   }
 }
   
+footer {
+  background: $black15;
+  background: linear-gradient(90deg, $white 15%, $black15 75%);
+  position: fixed;
+  width: 100%;
+  .footer-container {
+    display: flex;
+    flex-flow: column;   
+    padding: 0 30px; 
+    .branding {
+      text-align: right;
+      img {
+        max-width: 150px;
+        margin: 20px 0 0 0;
+      }
+    }
+    .navigation {
+      nav.menu-menu-1-container {
+        > ul {
+          display: flex;
+          flex-flow: column;
+          > li {
+            list-style-type: none;
+            margin: 0;
+            a {
+              font-size: 12px;
+              color: $black;
+              display: block;
+              text-transform: uppercase;
+              text-decoration: none;
+              font-weight: bold;
+              text-align: right;
+              transition: all 250ms;
+              &:hover {
+                color: $darkgreen;
+                text-decoration: underline;
+              }
+            }
+            > ul {
+              display: flex;
+              flex-flow: column;
+              display: none;
+              > li {
+                list-style-type: none;
+                a {
+                  display: block;
+                }
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

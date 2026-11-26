@@ -5,29 +5,16 @@
     }
   }
   @if $point == desktop {
-    @media only screen and (min-width: 1024px) {
-      @content;
-    }
-  }
-  @if $point == md {
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-      @content;
-    }
-  }
-  @if $point == lg {
-    @media only screen and (min-width: 993px) and (max-width: 1199px) {
-      @content;
-    }
-  }
-  @if $point == xl {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 993px) {
       @content;
     }
   }
 }
+
 $white: #ffffff;
 $black: #000000;
 $green: rgba(119, 213, 24, 1);
+$darkgreen: darken($green, 10%);
 $gold:  #f28e25;
 $red:   #d43248;
 $blue:  #121f45;
@@ -38,9 +25,40 @@ $black50: rgba(0,0,0,0.5);
 $black25: rgba(0,0,0,0.25);
 $black15: rgba(0,0,0,0.15);
 $black10: rgba(0,0,0,0.1);
+$white90: rgba(255,255,255,0.9);
+$white75: rgba(255,255,255,0.75);
+$white50: rgba(255,255,255,0.5);
+$white25: rgba(255,255,255,0.25);
+$white15: rgba(255,255,255,0.15);
+$white10: rgba(255,255,255,0.1);
 
 .mobile-only {
   @include breakpoint(desktop){
     display: none !important;
   }
 }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis-Regular.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis-Thin.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis-Bold.woff2') format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis-Black.woff2') format('woff2');
+  font-weight: 800;
+}
+

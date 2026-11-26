@@ -11,10 +11,11 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
     <div class="header-container">
       <div class="branding">
-        <img src="/wp-content/themes/seismion/images/logo.png" alt="Seismion Audio" class="logo">
+        <a href="/">
+          <img src="/wp-content/themes/seismion/images/logo-dark.png" alt="Seismion Audio" class="logo">
+        </a>
       </div>
       <div class="navigation">
       <?php wp_nav_menu( array(
@@ -24,5 +25,4 @@
         )); ?>
       </div>
     </div>
-  </div>
 </header>
